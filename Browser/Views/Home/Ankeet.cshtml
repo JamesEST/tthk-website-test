@@ -1,0 +1,22 @@
+﻿@model Browser.Models.Guest
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <label for="Name">First name:</label>
+    <p>@Html.TextBoxFor(x => x.Name, new { @class = "form-control" })</p>
+    <label for="Email">Email:</label>
+    <p>@Html.TextBoxFor(x => x.Email, new { @class = "form-control" })</p>
+    <label for="Phone">Phone:</label>
+    <p>@Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })</p>
+    <label for="WillAttend">Will you come?: </label>
+    <p>
+    @Html.DropDownListFor(x => x.WillAttend, new[] {
+       new SelectListItem() {Text="I will definitely come!", Value=bool.TrueString},
+       new SelectListItem() {Text="Unfortunately I won't come!", Value=bool.FalseString}
+    }, "Choose...", new { @class = "form-control" })
+    </p>
+
+<input type="submit" value="Submit" class="btn btn-primary" />
+}
+

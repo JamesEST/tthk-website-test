@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@*
+    <div class="jumbotron">
+        <h1>@ViewBag.Greeting, dear friend!</h1>
+    </div>
+    <div>
+        @ViewBag.Message
+        <img src="~/Images/Skolko-zhivut-korgi-1.jpg"
+    </div>
+    <div>
+       @Html.ActionLink("Vastan","Ankeet", "Ankeet", new { @class = "btn btn-primary" })</div>*@
+
+<div class="jumbotron">
+    <h2>Hallelujah! At least something interesting has started. Now I'd like some more popcorn,and it would be great.</h2>
+</div>
+
+<div class="container">
+    <div class="col-md-4">
+        <div class="row">
+            <h2>@ViewBag.Greeting, dear friend!</h2>
+        </div>
+        <div class="row">
+            <img src="~/Images/Skolko-zhivut-korgi-1.jpg" class="img-rounded">
+        </div>
+        <div class="row">
+            <br>
+            @Html.ActionLink("Get an Interview", "Ankeet", "Ankeet", new { @class = "btn btn-success" })
+        </div>
+    </div>
+</div>

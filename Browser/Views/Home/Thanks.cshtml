@@ -1,0 +1,26 @@
+﻿@model Browser.Models.Guest
+
+@{
+    ViewBag.Title = "Thank you";
+}
+<div>
+    <p>Thank you, @Model.Name!</p>
+</div>
+<div>
+    @if (Model.WillAttend == true)
+    {
+        @:We are waiting for you dear friend!
+        <p>
+            <img src="~/Images/korgi.jpg" />
+        </p>
+    }
+    else
+    {
+        @:Sad, Maybe Next Time!
+        <p>
+            <img src="~/Images/sadkorgi.jpg" />
+        </p>
+    }
+
+</div>
+
